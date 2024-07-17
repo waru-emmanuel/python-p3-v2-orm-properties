@@ -136,6 +136,7 @@ class Department:
             WHERE name is ?
         """
 
+
         row = CURSOR.execute(sql, (name,)).fetchone()
         return cls.instance_from_db(row) if row else None
 
